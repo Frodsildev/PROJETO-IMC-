@@ -1,0 +1,52 @@
+# PROJETO-IMC-
+Projeto de estudos, feito na linguagem C
+
+#include <stdio.h>
+
+//AUTOR: Filipe Rodrigues da Silva
+//Projeto de estudos - CALCULO DE IMC COM A LINGUAGEM C
+//Versão 1.0-2022
+
+float altura, peso, imc;
+
+void main (){
+	
+	printf("**********\n*** CALCULO DE IMC (C) **\n***********");
+	printf("\n\n************\n");
+		
+	printf("\ninforme a altura:\n");
+	scanf("%f", &altura);
+	
+	printf("\nInforme o peso:\n");
+	scanf("%f", &peso);
+	
+	imc = peso / (altura * altura);
+	
+	printf("\n\n************");
+	
+	printf("\nTABELA IMC:\n");
+	printf("\n-18.5 ABAIXO DO PESO\n");
+	printf(" 18.5 a 25 PESO NORMAL\n");
+	printf(" 25 a 30 SOBREPESO\n");
+	printf(" 30 a 35 OBESIDADE I\n");
+	printf(" 35 a 40 OBESiDADE II\n");
+	printf("+40 OBESIDADE III\n");
+	
+	printf("**********\n");
+	
+	if (imc < 18.5)
+	   printf("\nSeu IMC e: %f, voce esta abaixo do peso !", imc);
+	     else if (imc > 18.5 && imc < 25)
+	     printf("\nSeu IMC e: %f, voce esta no peso normal !", imc);
+	       else if (imc >= 25 && imc < 30)
+	       printf("\nSeu IMC e: %f, voce esta acima do peso ideal !", imc);
+	         else if (imc >= 30 && imc < 35)
+	         printf("\nSeu IMC e: %f, voce está obeso !", imc);
+	           else if (imc >= 35 && imc < 40)
+	           printf("\nSeu IMC e: %f, voce esta com obesidade de grau II !", imc);
+	             else if (imc > 40)
+	             printf("\nSeu IMC e: %f, Voce esta com obesidade de grau III !", imc);
+	         
+	
+	return 0;
+}
